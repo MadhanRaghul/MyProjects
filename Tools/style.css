@@ -1,6 +1,6 @@
-button{
-    height: 100px;
-    width: 100px;
+#menu button{
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     border-style: none;
 }
@@ -10,19 +10,41 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    position: relative;
 }
 
-.contents{
+#calc, #tour, #currency, #clock, #weather, #timer{
+    border-radius: 50%;
+    border-style: none;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    display: none;
+    transition-property: all;
+
+}
+
+#menu:hover~#calc{
+    background-color: black;
     display: block;
-    background-color: blueviolet;
-}
 
-.circles{
-    background-color: red;
-    height: 400px;
 }
 
 #menu{
-    margin-left: 30%;
+    position: absolute;
+}
+
+@keyframes comeOut{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(300px);
+    }
+}
+
+#calc{
+    animation-name: comeOut;
+    animation-duration: 3s;
+    animation-delay: 2s;
 }
