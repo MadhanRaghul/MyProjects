@@ -1,0 +1,28 @@
+button{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border-style: none;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.contents{
+    display: block;
+    background-color: blueviolet;
+}
+
+.circles{
+    background-color: red;
+    height: 400px;
+}
+
+#menu{
+    margin-left: 30%;
+}
