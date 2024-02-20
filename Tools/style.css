@@ -1,9 +1,4 @@
-#menu button{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border-style: none;
-}
+/*-*/
 
 .container{
     height: 100vh;
@@ -11,7 +6,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: aquamarine;
 }
+
+/*----- BUTTON STYLING -----*/
 
 #calc, #tour, #currency, #clock, #weather, #timer{
     border-radius: 50%;
@@ -19,32 +17,163 @@
     height: 200px;
     width: 200px;
     position: absolute;
-    display: none;
-    transition-property: all;
-
 }
 
-#menu:hover~#calc{
-    background-color: black;
-    display: block;
-
+#menu button{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border-style: none;
 }
 
 #menu{
     position: absolute;
-}
-
-@keyframes comeOut{
-    from{
-        transform: translateX(0px);
-    }
-    to{
-        transform: translateX(300px);
-    }
+    z-index: 2;
 }
 
 #calc{
-    animation-name: comeOut;
-    animation-duration: 3s;
-    animation-delay: 2s;
+    height: 190px !important;
+    width: 190px !important;
+    z-index: 1;
+}
+
+#tour{
+    height: 90px !important;
+    width: 90px !important;
+    z-index: 1;
+}
+
+#weather{
+    height: 140px !important;
+    width: 140px !important;
+    z-index: 1;
+}
+
+#clock{
+    height: 100px !important;
+    width: 100px !important;
+    z-index: 1;
+}
+
+#timer{
+    height: 120px !important;
+    width: 120px !important;
+    z-index: 1;
+}
+
+#currency{
+    height: 170px !important;
+    width: 170px !important;
+    z-index: 1;
+}
+
+/*----- BUTTON HOVER -----*/
+
+#calc:hover{
+    box-shadow: 2px 2px 15px;
+}
+
+/*----- ANIMATIONS -----*/
+
+@keyframes animeCalc{
+    0%{
+        transform: translate(0px);
+    }
+    50%{
+        transform: translate(-250px, -165px);
+    }
+    100%{
+        transform: translate(-225px, -150px);
+    }
+}
+
+@keyframes animeWeather{
+    0%{
+        transform: translate(0px);
+    }
+    50%{
+        transform: translate(160px, -195px);
+    }
+    100%{
+        transform: translate(145px, -180px);
+    }
+}
+
+@keyframes animeTour{
+    0%{
+        transform: translate(0px);
+    }
+    50%{
+        transform: translate(-115px, 195px);
+    }
+    100%{
+        transform: translate(-105px, 180px);
+    }
+}
+
+@keyframes animeClock{
+    0%{
+        transform: translate(0px);
+    }
+    50%{
+        transform: translate(330px, -66px);
+    }
+    100%{
+        transform: translate(300px, -60px);
+    }
+}
+
+@keyframes animeTimer{
+    0%{
+        transform: translate(0px);
+    }
+    50%{
+        transform: translate(-280px, 93px);
+    }
+    100%{
+        transform: translate(-265px, 85px);
+    }
+}
+
+@keyframes animeCurrency{
+    0%{
+        transform: translate(0px);
+    }
+    50%{
+        transform: translate(220px, 165px);
+    }
+    100%{
+        transform: translate(200px, 150px);
+    }
+}
+
+
+.animateCalc{
+    animation: animeCalc 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animateWeather{
+    animation: animeWeather 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animateTour{
+    animation: animeTour 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animateClock{
+    animation: animeClock 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animateTimer{
+    animation: animeTimer 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animateCurrency{
+    animation: animeCurrency 1s ease-out;
+    animation-fill-mode: forwards;
 }
