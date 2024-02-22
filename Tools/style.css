@@ -5,7 +5,7 @@ body{
 /*----- NAVBAR -----*/
 
 .navbar{
-    background-color: rgb(236, 236, 236);
+    background-color: floralwhite;
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -26,22 +26,30 @@ ul{
 .contents li{
     list-style-type: none;
     padding: 20px;
-    font-size: 1.5em;
+    font-size: 1.3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .contents a{
     text-decoration: none;
     color: rgb(0, 0, 0);
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+.contents a:hover{
+    color: grey;
+    letter-spacing: 2px;
 }
 /*-*/
 
 .container{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: aquamarine;
+    background-color: rgb(253, 253, 253);
 }
 
 /*----- BUTTON STYLING -----*/
@@ -67,46 +75,108 @@ ul{
     z-index: 2;
 }
 
+#menubtn{
+    background-color: hsl(34, 100%, 73%);
+    transition: all 0.4s ease-out;
+}
+
 #calc{
     height: 190px !important;
     width: 190px !important;
     z-index: 1;
+    background-color: hsl(52, 100%, 73%);
+    transition: all 0.5s;
 }
 
 #tour{
     height: 90px !important;
     width: 90px !important;
     z-index: 1;
+    background-color: hsl(109, 100%, 73%);
+    transition: all 0.5s;
 }
 
 #weather{
     height: 140px !important;
     width: 140px !important;
     z-index: 1;
+    background-color: hsl(161, 100%, 73%);
+    transition: all 0.5s;
 }
 
 #clock{
     height: 100px !important;
     width: 100px !important;
     z-index: 1;
+    background-color: hsl(211, 100%, 73%);
+    transition: all 0.5s;
 }
 
 #timer{
     height: 120px !important;
     width: 120px !important;
     z-index: 1;
+    background-color: hsl(269, 100%, 73%);
+    transition: all 0.5s;
 }
 
 #currency{
     height: 170px !important;
     width: 170px !important;
     z-index: 1;
+    background-color: hsl(321, 100%, 73%);
+    transition: all 0.5s;
 }
 
 /*----- BUTTON HOVER -----*/
 
+#menubtn:hover{
+    box-shadow: 2px 2px 15px grey;
+    letter-spacing: 2px;
+    background-color: hsl(34, 100%, 63%);
+    font-size: 1.2em;
+}
+
 #calc:hover{
-    box-shadow: 2px 2px 15px;
+    box-shadow: 2px 2px 15px grey;
+    letter-spacing: 2px;
+    background-color: hsl(52, 100%, 63%);
+    font-size: 1.2em;
+}
+
+#tour:hover{
+    box-shadow: 2px 2px 15px grey;
+    letter-spacing: 2px;
+    background-color: hsl(109, 100%, 63%);
+    font-size: 1.2em;
+}
+
+#weather:hover{
+    box-shadow: 2px 2px 15px grey;
+    letter-spacing: 2px;
+    background-color: hsl(161, 100%, 63%);
+    font-size: 1.2em;
+}
+
+#clock:hover{
+    box-shadow: 2px 2px 15px grey;
+    letter-spacing: 2px;
+    background-color: hsl(211, 100%, 63%);
+    font-size: 1.2em;
+}
+
+#timer:hover{
+    box-shadow: 2px 2px 15px grey;
+    letter-spacing: 2px;
+    background-color: hsl(269, 100%, 63%);
+    font-size: 1.2em;
+}
+
+#currency:hover{
+    box-shadow: 2px 2px 15px grey;
+    letter-spacing: 2px;
+    background-color: hsl(321, 100%, 63%);
+    font-size: 1.2em;
 }
 
 /*----- ANIMATIONS -----*/
@@ -190,27 +260,27 @@ ul{
 }
 
 .animateWeather{
-    animation: animeWeather 1s ease-out;
+    animation: animeWeather 1.4s ease-out;
     animation-fill-mode: forwards;
 }
 
 .animateTour{
-    animation: animeTour 1s ease-out;
+    animation: animeTour 2s ease-out;
     animation-fill-mode: forwards;
 }
 
 .animateClock{
-    animation: animeClock 1s ease-out;
+    animation: animeClock 1.8s ease-out;
     animation-fill-mode: forwards;
 }
 
 .animateTimer{
-    animation: animeTimer 1s ease-out;
+    animation: animeTimer 1.6s ease-out;
     animation-fill-mode: forwards;
 }
 
 .animateCurrency{
-    animation: animeCurrency 1s ease-out;
+    animation: animeCurrency 1.2s ease-out;
     animation-fill-mode: forwards;
 }
 
