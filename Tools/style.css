@@ -5,18 +5,22 @@ body{
 /*----- NAVBAR -----*/
 
 .navbar{
-    background-color: floralwhite;
+    background-color: rgb(210, 210, 210);
     display: flex;
     justify-content: space-between;
     height: 80px;
     align-items: center;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+
 }
 
 .logo{
     padding-left: 20px;
 }
 
-ul{
+.contents ul{
     display: flex;
     flex-direction: row;
     font: 1em sans-serif;
@@ -41,10 +45,34 @@ ul{
     color: grey;
     letter-spacing: 2px;
 }
+
+.items{
+    display: none;
+    display: flex;   
+    position: fixed;
+    z-index: 2;
+    margin-left: 75.5%;
+    margin-top: 200px;
+}
+
+.items ul{
+    list-style-type: none;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:floralwhite;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 90px;
+    display: none;
+}
+
 /*-*/
 
 .container{
-    height: 90vh;
+    height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,7 +82,7 @@ ul{
 
 /*----- BUTTON STYLING -----*/
 
-#calc, #tour, #currency, #clock, #weather, #timer{
+#conver, #suv, #muscle, #sedan, #electric, #sports{
     border-radius: 50%;
     border-style: none;
     height: 200px;
@@ -63,24 +91,25 @@ ul{
     font: 1em sans-serif;
 }
 
-#menu button{
+#cars button{
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    border-style: none;font: 1em sans-serif;
+    border-style: none;
+    font: 1em sans-serif;
 }
 
-#menu{
+#cars{
     position: absolute;
     z-index: 2;
 }
 
-#menubtn{
+#carsbtn{
     background-color: hsl(34, 100%, 73%);
     transition: all 0.4s ease-out;
 }
 
-#calc{
+#conver{
     height: 190px !important;
     width: 190px !important;
     z-index: 1;
@@ -88,7 +117,7 @@ ul{
     transition: all 0.5s;
 }
 
-#tour{
+#suv{
     height: 90px !important;
     width: 90px !important;
     z-index: 1;
@@ -96,7 +125,7 @@ ul{
     transition: all 0.5s;
 }
 
-#weather{
+#electric{
     height: 140px !important;
     width: 140px !important;
     z-index: 1;
@@ -104,7 +133,7 @@ ul{
     transition: all 0.5s;
 }
 
-#clock{
+#sedan{
     height: 100px !important;
     width: 100px !important;
     z-index: 1;
@@ -112,7 +141,7 @@ ul{
     transition: all 0.5s;
 }
 
-#timer{
+#sports{
     height: 120px !important;
     width: 120px !important;
     z-index: 1;
@@ -120,7 +149,7 @@ ul{
     transition: all 0.5s;
 }
 
-#currency{
+#muscle{
     height: 170px !important;
     width: 170px !important;
     z-index: 1;
@@ -130,58 +159,65 @@ ul{
 
 /*----- BUTTON HOVER -----*/
 
-#menubtn:hover{
+#carsbtn:hover{
     box-shadow: 2px 2px 15px grey;
     letter-spacing: 2px;
     background-color: hsl(34, 100%, 63%);
     font-size: 1.2em;
+    scale: 105%;
 }
 
-#calc:hover{
+#conver:hover{
     box-shadow: 2px 2px 15px grey;
     letter-spacing: 2px;
     background-color: hsl(52, 100%, 63%);
     font-size: 1.2em;
+    scale: 105%;
 }
 
-#tour:hover{
+#suv:hover{
     box-shadow: 2px 2px 15px grey;
     letter-spacing: 2px;
     background-color: hsl(109, 100%, 63%);
     font-size: 1.2em;
+    scale: 105%;
 }
 
-#weather:hover{
+#electric:hover{
     box-shadow: 2px 2px 15px grey;
     letter-spacing: 2px;
     background-color: hsl(161, 100%, 63%);
     font-size: 1.2em;
+    scale: 105%;
 }
 
-#clock:hover{
+#sedan:hover{
     box-shadow: 2px 2px 15px grey;
     letter-spacing: 2px;
     background-color: hsl(211, 100%, 63%);
     font-size: 1.2em;
+    scale: 105%;
 }
 
-#timer:hover{
+#sports:hover{
     box-shadow: 2px 2px 15px grey;
     letter-spacing: 2px;
     background-color: hsl(269, 100%, 63%);
     font-size: 1.2em;
+    scale: 105%;
 }
 
-#currency:hover{
+#muscle:hover{
     box-shadow: 2px 2px 15px grey;
     letter-spacing: 2px;
     background-color: hsl(321, 100%, 63%);
     font-size: 1.2em;
+    scale: 105%;
 }
 
 /*----- ANIMATIONS -----*/
 
-@keyframes animeCalc{
+@keyframes animeconver{
     0%{
         transform: translate(0px);
     }
@@ -193,7 +229,7 @@ ul{
     }
 }
 
-@keyframes animeWeather{
+@keyframes animeelectric{
     0%{
         transform: translate(0px);
     }
@@ -205,7 +241,7 @@ ul{
     }
 }
 
-@keyframes animeTour{
+@keyframes animesuv{
     0%{
         transform: translate(0px);
     }
@@ -217,7 +253,7 @@ ul{
     }
 }
 
-@keyframes animeClock{
+@keyframes animesedan{
     0%{
         transform: translate(0px);
     }
@@ -229,7 +265,7 @@ ul{
     }
 }
 
-@keyframes animeTimer{
+@keyframes animesports{
     0%{
         transform: translate(0px);
     }
@@ -241,7 +277,7 @@ ul{
     }
 }
 
-@keyframes animeCurrency{
+@keyframes animemuscle{
     0%{
         transform: translate(0px);
     }
@@ -254,33 +290,81 @@ ul{
 }
 
 
-.animateCalc{
-    animation: animeCalc 1s ease-out;
+.animateconver{
+    animation: animeconver 1s ease-out;
     animation-fill-mode: forwards;
 }
 
-.animateWeather{
-    animation: animeWeather 1.4s ease-out;
+.animateelectric{
+    animation: animeelectric 1.4s ease-out;
     animation-fill-mode: forwards;
 }
 
-.animateTour{
-    animation: animeTour 2s ease-out;
+.animatesuv{
+    animation: animesuv 2s ease-out;
     animation-fill-mode: forwards;
 }
 
-.animateClock{
-    animation: animeClock 1.8s ease-out;
+.animatesedan{
+    animation: animesedan 1.8s ease-out;
     animation-fill-mode: forwards;
 }
 
-.animateTimer{
-    animation: animeTimer 1.6s ease-out;
+.animatesports{
+    animation: animesports 1.6s ease-out;
     animation-fill-mode: forwards;
 }
 
-.animateCurrency{
-    animation: animeCurrency 1.2s ease-out;
+.animatemuscle{
+    animation: animemuscle 1.2s ease-out;
     animation-fill-mode: forwards;
 }
 
+/*----- ABOUT CARS -----*/
+
+.about-cars{
+    height: 90vh;
+    background-color: hsl(59, 100%, 73%);
+    display: flex;
+    flex-direction: column;
+    padding-left: 150px;
+    padding-right: 100px;
+    font: 1.8em sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-cars p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/*----- ABOUT CONVERTIBLE -----*/
+
+.about-sports{
+    font: 1em sans-serif;
+    height: 90vh;
+    background-color: hsl(269, 100%, 73%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cars-sports{
+    height: 60vh;
+    width: 80vw;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.corvette:hover{
+    transform: translateY(-20px);
+}
+
+.corvette p{
+    display: block;
+}

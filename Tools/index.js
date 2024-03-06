@@ -1,10 +1,10 @@
-const menu = document.getElementById('menu')
-const calc = document.getElementById('calc')
-const tour = document.getElementById('tour')
-const clock = document.getElementById('clock')
-const currency = document.getElementById('currency')
-const weather = document.getElementById('weather')
-const timer = document.getElementById('timer')
+const cars = document.getElementById('cars')
+const conver = document.getElementById('conver')
+const suv = document.getElementById('suv')
+const sedan = document.getElementById('sedan')
+const muscle = document.getElementById('muscle')
+const electric = document.getElementById('electric')
+const sports = document.getElementById('sports')
 
 
 /*menu.addEventListener('mouseover', () => {
@@ -15,26 +15,26 @@ manu.addEventListener('mouseout', () => {
   calc.style.transform = 'translateX(0)'
 })*/
 
-menu.addEventListener('mouseover', () => {
-    calc.classList.add('animateCalc')
+cars.addEventListener('mouseover', () => {
+    conver.classList.add('animateconver')
 } )
 
-menu.addEventListener('mouseover', () => {
-    tour.classList.add('animateTour')
+cars.addEventListener('mouseover', () => {
+    suv.classList.add('animatesuv')
 } )
 
-menu.addEventListener('mouseover', () => {
-    weather.classList.add('animateWeather')
+cars.addEventListener('mouseover', () => {
+    electric.classList.add('animateelectric')
 } )
 
-menu.addEventListener('mouseover', () => {
-    clock.classList.add('animateClock')
+cars.addEventListener('mouseover', () => {
+    sedan.classList.add('animatesedan')
 } )
 
-menu.addEventListener('mouseover', () => {
-    timer.classList.add('animateTimer')
+cars.addEventListener('mouseover', () => {
+    sports.classList.add('animatesports')
 } )
 
-menu.addEventListener('mouseover', () => {
-    currency.classList.add('animateCurrency')
+cars.addEventListener('mouseover', () => {
+    muscle.classList.add('animatemuscle')
 } )
