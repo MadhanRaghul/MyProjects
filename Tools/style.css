@@ -1,3 +1,11 @@
+html{
+    scroll-snap-type: y mandatory;
+}
+
+.section{
+    scroll-snap-align: start;
+}
+
 body{
     margin: 0;
 }
@@ -72,7 +80,8 @@ body{
 /*-*/
 
 .container{
-    height: 110vh;
+    padding-top: 10vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +130,7 @@ body{
     height: 90px !important;
     width: 90px !important;
     z-index: 1;
-    background-color: hsl(109, 100%, 73%);
+    background-color: hsl(18, 100%, 73%);
     transition: all 0.5s;
 }
 
@@ -178,7 +187,7 @@ body{
 #suv:hover{
     box-shadow: 2px 2px 15px grey;
     letter-spacing: 2px;
-    background-color: hsl(109, 100%, 63%);
+    background-color: hsl(18, 100%, 63%);
     font-size: 1.2em;
     scale: 105%;
 }
@@ -323,8 +332,8 @@ body{
 /*----- ABOUT CARS -----*/
 
 .about-cars{
-    height: 90vh;
-    background-color: hsl(59, 100%, 73%);
+    height: 100vh;
+    background-image: linear-gradient(hsl(59, 100%, 83%),hsl(59, 100%, 58%));
     display: flex;
     flex-direction: column;
     padding-left: 150px;
@@ -343,13 +352,14 @@ body{
 /*----- ABOUT CONVERTIBLE -----*/
 
 .about-allcars{
-    height: 90vh;
-    background-color: hsl(269, 100%, 73%);
+    height: 100vh;
+    background-image: linear-gradient(hsl(269, 100%, 83%),hsl(269, 100%, 58%));
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-family: sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
 }
 
 .cars-info{
@@ -361,14 +371,14 @@ body{
     justify-content: space-evenly;
 }
 
-.corvette{
+.cars-card{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.corvette img{
+.cars-card img{
     z-index: 2;
     transition: all;
     transition-duration: 0.3s;
@@ -376,35 +386,58 @@ body{
     cursor: pointer;
 }
 
-.corvette p{
+.cars-card p{
     z-index: 1;
-    margin-top: -20px;
+    margin-top: -25px;
     transition: all;
     transition-duration: 0.2s;
 }
 
-.corvette img:hover{
+.cars-card img:hover{
     transform: translateY(-20px);
     box-shadow: 0px 7px 8px rgb(45, 45, 45);
 }
 
-.corvette:hover p{
-    transform: translateY(20px);
+.cars-card:hover p{
+    transform: translateY(25px);
 }
 
 .about-allcars button{
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 10px;
     border-radius: 20px;
     border-style: solid;
-    border-color: white;
-    color: white;
-    background-color: hsl(269, 100%, 73%);
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    background-color: transparent;
     transition: all 0.3s;
     cursor: pointer;
+    text-align: center;
 }
 
 .about-allcars button:hover{
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     color: hsl(269, 100%, 73%);
+}
+
+
+
+.electric-bg{
+    background-image: linear-gradient(hsl(161, 100%, 83%),hsl(161, 100%, 58%));
+}
+
+.muscle-bg{
+    background-image: linear-gradient(hsl(321, 100%, 83%),hsl(321, 100%, 58%));
+}
+
+.convertible-bg{
+    background-image: linear-gradient(hsl(52, 100%, 83%),hsl(52, 100%, 58%));
+}
+
+.sedan-bg{
+    background-image: linear-gradient(hsl(211, 100%, 83%),hsl(211, 100%, 58%));
+}
+
+.suv-bg{
+    background-image: linear-gradient(hsl(18, 100%, 83%),hsl(18, 100%, 58%));
 }
