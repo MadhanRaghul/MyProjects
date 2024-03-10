@@ -8,12 +8,13 @@ html{
 
 body{
     margin: 0;
+    background-color: white;
 }
 
 /*----- NAVBAR -----*/
 
 .navbar{
-    background-color: rgb(210, 210, 210);
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -21,7 +22,7 @@ body{
     position: fixed;
     z-index: 3;
     width: 100%;
-
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.272);
 }
 
 .logo{
@@ -86,7 +87,7 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: rgb(253, 253, 253);
+ /*    background-color: rgb(253, 253, 253); */
 }
 
 /*----- BUTTON STYLING -----*/
@@ -349,7 +350,7 @@ body{
     text-justify: inter-word;
 }
 
-/*----- ABOUT CONVERTIBLE -----*/
+/*----- ALL CARS -----*/
 
 .about-allcars{
     height: 100vh;
@@ -420,6 +421,25 @@ body{
     color: hsl(269, 100%, 73%);
 }
 
+.electric-bg button:hover{
+    color: hsl(161, 100%, 73%);
+}
+
+.convertible-bg button:hover{
+    color: hsl(52, 100%, 73%);
+}
+
+.muscle-bg button:hover{
+    color: hsl(321, 100%, 73%);
+}
+
+.sedan-bg button:hover{
+    color: hsl(211, 100%, 73%);
+}
+
+.suv-bg button:hover{
+    color: hsl(18, 100%, 73%);
+}
 
 
 .electric-bg{
@@ -440,4 +460,20 @@ body{
 
 .suv-bg{
     background-image: linear-gradient(hsl(18, 100%, 83%),hsl(18, 100%, 58%));
+}
+
+.test{
+    background-image: url(./pics/Convertible/Audi\ A5.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: animetest 1s forwards;
+}
+
+@keyframes animetest{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
