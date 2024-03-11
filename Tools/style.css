@@ -1,5 +1,6 @@
 html{
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 .section{
@@ -10,6 +11,7 @@ body{
     margin: 0;
     background-color: white;
 }
+
 
 /*----- NAVBAR -----*/
 
@@ -87,7 +89,7 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
- /*    background-color: rgb(253, 253, 253); */
+    overflow: hidden;
 }
 
 /*----- BUTTON STYLING -----*/
@@ -99,6 +101,7 @@ body{
     width: 200px;
     position: absolute;
     font: 1em sans-serif;
+    cursor: pointer;
 }
 
 #cars button{
@@ -353,6 +356,7 @@ body{
 /*----- ALL CARS -----*/
 
 .about-allcars{
+    padding-top: 20px;
     height: 100vh;
     background-image: linear-gradient(hsl(269, 100%, 83%),hsl(269, 100%, 58%));
     display: flex;
@@ -463,17 +467,52 @@ body{
 }
 
 .test{
-    background-image: url(./pics/Convertible/Audi\ A5.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    animation: animetest 1s forwards;
+    background-color: hsl(52, 100%, 73%);
+    transition: 0.5s;
 }
 
-@keyframes animetest{
-    from{
+#top{
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(52, 100%, 73%);
+    transition: 1s;
+    display: none;
+    animation: fadeIn 0.5s forwards;
+}
+
+#mid{
+    height: 210%;
+    width: 95%;
+    background-color: hsl(52, 100%, 78%);
+    position: absolute;
+    border-radius: 50%;
+    transition: 0.5s;
+    box-shadow: inset rgb(0, 0, 0) 0px 0px 30px -10px;
+    animation: fadeIn 0.5s forwards;
+    display: none;
+}
+
+#below{
+    height: 200%;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: inset hsl(0, 0%, 0%) 0px 0px 30px -10px;
+    animation: fadeIn 0.5s forwards;
+    display: none;
+}
+
+@keyframes fadeIn{
+    0%{
         opacity: 0;
+        scale: 1;
     }
-    to{
+    80%{
         opacity: 1;
+        scale: 1.05;
+    }
+    100%{
+        scale: 1;
     }
 }
