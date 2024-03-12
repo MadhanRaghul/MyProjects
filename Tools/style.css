@@ -80,7 +80,7 @@ body{
     display: none;
 }
 
-/*-*/
+/* CONTAINER */
 
 .container{
     padding-top: 10vh;
@@ -92,7 +92,7 @@ body{
     overflow: hidden;
 }
 
-/*----- BUTTON STYLING -----*/
+/* MENU BUTTON STYLING */
 
 #conver, #suv, #muscle, #sedan, #electric, #sports{
     border-radius: 50%;
@@ -177,7 +177,7 @@ body{
     transition: all 0.5s;
 }
 
-/*----- BUTTON HOVER -----*/
+/* MENU BUTTON HOVER */
 
 #carsbtn:hover{
     box-shadow: 2px 2px 15px grey;
@@ -235,7 +235,7 @@ body{
     scale: 105%;
 }
 
-/*----- ANIMATIONS -----*/
+/* MENU ANIMATIONS */
 
 @keyframes animeconver{
     0%{
@@ -374,6 +374,8 @@ body{
     font-size: 1.3em;
 }
 
+/* CAR CARDS */
+
 .cars-info{
     height: 50vh;
     width: 80vw;
@@ -414,6 +416,8 @@ body{
     transform: translateY(25px);
 }
 
+/* ABOUT MORE BUTTON STYLING */
+
 .about-allcars button{
     font-size: 1em;
     padding: 10px;
@@ -452,6 +456,7 @@ body{
     color: hsl(18, 100%, 73%);
 }
 
+/* CARS BACKGROUND COLORS */
 
 .electric-bg{
     background-image: linear-gradient(hsl(161, 100%, 83%),hsl(161, 100%, 58%));
@@ -473,10 +478,7 @@ body{
     background-image: linear-gradient(hsl(18, 100%, 83%),hsl(18, 100%, 58%));
 }
 
-.test{
-    background-color: hsl(52, 100%, 73%);
-    transition: 0.5s;
-}
+/* MENU FRAMES */
 
 #top{
     height: 100vh;
@@ -498,7 +500,7 @@ body{
     box-shadow: inset rgb(0, 0, 0) 0px 0px 30px -10px;
     animation: fadeIn 0.5s forwards;
     display: none;
-    animation: frameFloatMid 3s infinite;
+    animation: frameFloatMid 1.5s infinite;
 }
 
 #below{
@@ -510,7 +512,7 @@ body{
     box-shadow: inset hsl(0, 0%, 0%) 0px 0px 30px -10px;
     animation: fadeIn 0.5s forwards;
     display: none;
-    animation: frameFloatBelow 3s infinite;
+    animation: frameFloatBelow 1.5s infinite;
 }
 
 @keyframes fadeIn{
@@ -549,4 +551,47 @@ body{
     100%{
         scale: 1;
     }
+}
+
+/* CARS HOVER BACKGROUND */
+
+.carsbg {
+    background-image: linear-gradient(hsl(269, 100%, 83%, 0.8),hsl(269, 100%, 58%, 0.8)), url(./pics/Sports/corvette.jpg);
+    background-size: cover;
+    animation-name: animeCarsBg;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animeCarsBg{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px)
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* TESTING */
+
+.footer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(hsl(269, 100%, 83%, 0.9),hsl(269, 100%, 58%, 0.9)), url(./pics/Sports/corvette.jpg) !important;
+    background-size: cover;
+    
 }

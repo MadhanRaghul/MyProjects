@@ -12,6 +12,8 @@ const top1 = document.getElementById('top')
 const mid1 = document.getElementById('mid')
 const below1 = document.getElementById('below')
 
+const corvetteBg = document.getElementById('corvette-bg')
+
 /*menu.addEventListener('mouseover', () => {
   calc.style.transform = 'translateX(300px)'
 })
@@ -94,4 +96,10 @@ suv.addEventListener('mouseover', () => {
     below1.style.display = 'block'
     mid1.style.display = 'block'
     top1.style.display = 'block'
+})
+
+
+
+corvetteBg.addEventListener('mouseover', () => {
+    document.getElementById('sporty').classList.add('carsbg')
 })
