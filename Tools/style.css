@@ -485,6 +485,7 @@ body{
     transition: 1s;
     display: none;
     animation: fadeIn 0.5s forwards;
+    
 }
 
 #mid{
@@ -497,6 +498,7 @@ body{
     box-shadow: inset rgb(0, 0, 0) 0px 0px 30px -10px;
     animation: fadeIn 0.5s forwards;
     display: none;
+    animation: frameFloatMid 3s infinite;
 }
 
 #below{
@@ -508,6 +510,7 @@ body{
     box-shadow: inset hsl(0, 0%, 0%) 0px 0px 30px -10px;
     animation: fadeIn 0.5s forwards;
     display: none;
+    animation: frameFloatBelow 3s infinite;
 }
 
 @keyframes fadeIn{
@@ -518,6 +521,30 @@ body{
     80%{
         opacity: 1;
         scale: 1.05;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+@keyframes frameFloatMid{
+    0%{
+        scale: 1;
+    }
+    30%{
+        scale: 1.02;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+@keyframes frameFloatBelow{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.02;
     }
     100%{
         scale: 1;

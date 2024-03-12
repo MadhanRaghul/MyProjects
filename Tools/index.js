@@ -6,6 +6,7 @@ const muscle = document.getElementById('muscle')
 const electric = document.getElementById('electric')
 const sports = document.getElementById('sports')
 const container = document.getElementsByClassName('container')
+const carsbtn= document.getElementsByClassName('carsbtn')
 
 const top1 = document.getElementById('top')
 const mid1 = document.getElementById('mid')
@@ -48,48 +49,48 @@ cars.addEventListener('mouseover', () => {
 /* CURVY FRAMES */
 
 conver.addEventListener('mouseover', () => {
-    top1.style.backgroundColor = 'hsl(52, 100%, 73%)';
-    mid1.style.backgroundColor = 'hsl(52, 100%, 73%)';
+    top1.style.backgroundColor = 'hsl(52, 100%, 73%)'
+    mid1.style.backgroundColor = 'hsl(52, 100%, 70%)'
     below1.style.display = 'block'
     mid1.style.display = 'block'
     top1.style.display = 'block'
 })
 
 sports.addEventListener('mouseover', () => {
-    top1.style.backgroundColor = 'hsl(269, 100%, 73%)';
-    mid1.style.backgroundColor = 'hsl(269, 100%, 73%)';
+    top1.style.backgroundColor = 'hsl(269, 100%, 73%)'
+    mid1.style.backgroundColor = 'hsl(269, 100%, 70%)'
     below1.style.display = 'block'
     mid1.style.display = 'block'
     top1.style.display = 'block'
 })
 
 electric.addEventListener('mouseover', () => {
-    top1.style.backgroundColor = 'hsl(161, 100%, 73%)';
-    mid1.style.backgroundColor = 'hsl(161, 100%, 73%)';
+    top1.style.backgroundColor = 'hsl(161, 100%, 73%)'
+    mid1.style.backgroundColor = 'hsl(161, 100%, 70%)'
     below1.style.display = 'block'
     mid1.style.display = 'block'
     top1.style.display = 'block'
 })
 
 muscle.addEventListener('mouseover', () => {
-    top1.style.backgroundColor = 'hsl(321, 100%, 73%)';
-    mid1.style.backgroundColor = 'hsl(321, 100%, 73%)';
+    top1.style.backgroundColor = 'hsl(321, 100%, 73%)'
+    mid1.style.backgroundColor = 'hsl(321, 100%, 70%)'
     below1.style.display = 'block'
     mid1.style.display = 'block'
     top1.style.display = 'block'
 })
 
 sedan.addEventListener('mouseover', () => {
-    top1.style.backgroundColor = 'hsl(211, 100%, 73%)';
-    mid1.style.backgroundColor = 'hsl(211, 100%, 73%)';
+    top1.style.backgroundColor = 'hsl(211, 100%, 73%)'
+    mid1.style.backgroundColor = 'hsl(211, 100%, 70%)'
     below1.style.display = 'block'
     mid1.style.display = 'block'
     top1.style.display = 'block'
 })
 
 suv.addEventListener('mouseover', () => {
-    top1.style.backgroundColor = 'hsl(18, 100%, 73%)';
-    mid1.style.backgroundColor = 'hsl(18, 100%, 73%)';
+    top1.style.backgroundColor = 'hsl(18, 100%, 73%)'
+    mid1.style.backgroundColor = 'hsl(18, 100%, 70%)'
     below1.style.display = 'block'
     mid1.style.display = 'block'
     top1.style.display = 'block'
