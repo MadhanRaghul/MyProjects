@@ -25,10 +25,33 @@ body{
     z-index: 3;
     width: 100%;
     box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.272);
+    animation: loadNav 0.5s;
+}
+
+@keyframes loadNav{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+    }
 }
 
 .logo{
     padding-left: 20px;
+    animation: loadLogo 1s;
+}
+
+@keyframes loadLogo{
+    0%{
+        transform: translateX(-100%);
+    }
+    60%{
+        transform: translateX(5%);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 
 .contents ul{
@@ -43,6 +66,7 @@ body{
     padding: 20px;
     font-size: 1.3em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 0;
 }
 
 .contents a{
@@ -57,28 +81,98 @@ body{
     letter-spacing: 2px;
 }
 
-.items{
-    display: none;
-    display: flex;   
-    position: fixed;
-    z-index: 2;
-    margin-left: 75.5%;
-    margin-top: 200px;
+.contents li:nth-child(1){
+    animation: loadContents 1s forwards;
+    animation-delay: 0.3s;
+
 }
 
-.items ul{
-    list-style-type: none;
-    cursor: pointer;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color:floralwhite;
-    padding: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    row-gap: 10px;
-    width: 90px;
-    display: none;
+.contents li:nth-child(2){
+    animation: loadContents 1s forwards;
+    animation-delay: 0.4s;
+
 }
+
+.contents li:nth-child(3){
+    animation: loadContents 1s forwards;
+    animation-delay: 0.5s;
+
+}
+
+.contents li:nth-child(4){
+    animation: loadContents 1s forwards;
+    animation-delay: 0.6s;
+
+}
+
+
+@keyframes loadContents{
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    60%{
+        opacity: 1;
+        transform: translateY(10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CAR TYPES DROPDOWN */
+
+#navCartypes{
+    cursor: pointer;
+}
+
+#cartypes{
+    display: none;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px 10px 10px;
+    line-height: 200%;
+    margin-top: 280px;
+    margin-left: 76.5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.272);
+    transform-origin: top;
+    animation-name: animeDropdown;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+#cartypes a{
+    text-decoration: none;
+    color: black;
+}
+
+#cartypes a:hover{
+    color: grey;
+}
+
+#arrow{
+    transform: rotate(-45deg);
+}
+
+@keyframes animeDropdown{
+    0%{
+        transform: scaleY(0);
+    }
+    40%{
+        transform: scaleY(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 
 /* CONTAINER */
 
@@ -90,6 +184,27 @@ body{
     align-items: center;
     position: relative;
     overflow: hidden;
+}
+
+@keyframes loadCarsbtn{
+    0%{
+        transform: translateY(-100%);
+    }
+    30%{
+        transform: translateY(0);
+    }
+    60%{
+        transform: translateY(-20%);
+    }
+    80%{
+        transform: translateY(0);
+    }
+    90%{
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 
 /* MENU BUTTON STYLING */
@@ -344,7 +459,8 @@ body{
 
 .about-cars{
     height: 100vh;
-    background-image: linear-gradient(hsl(59, 100%, 83%),hsl(59, 100%, 58%));
+    background-image: linear-gradient(hsla(150, 100%, 83%, 0.85),hsl(150, 100%, 58%, 0.85)), url(./pics/logo/about.jpg);
+    background-size: cover;    
     display: flex;
     flex-direction: column;
     padding-left: 150px;
@@ -365,7 +481,8 @@ body{
 .about-allcars{
     padding-top: 20px;
     height: 100vh;
-    background-image: linear-gradient(hsl(269, 100%, 83%),hsl(269, 100%, 58%));
+    background-image: linear-gradient(hsl(269, 100%, 83%, 0.85),hsl(269, 100%, 58%, 0.85)), url(./pics/Sports/corvette.jpg);
+    background-size: cover;    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -459,26 +576,33 @@ body{
 /* CARS BACKGROUND COLORS */
 
 .electric-bg{
-    background-image: linear-gradient(hsl(161, 100%, 83%),hsl(161, 100%, 58%));
+    background-image: linear-gradient(hsl(161, 100%, 83%, 0.85),hsl(161, 100%, 58%, 0.85)), url(./pics/Electric/Tesla\ Model\ S.jpg);
+    background-size: cover;
 }
 
 .muscle-bg{
-    background-image: linear-gradient(hsl(321, 100%, 83%),hsl(321, 100%, 58%));
+    background-image: linear-gradient(hsl(321, 100%, 83%, 0.85),hsl(321, 100%, 58%, 0.85)), url(./pics/Muscle/Thunder\ bird.jpg);
+    background-size: cover;
 }
 
 .convertible-bg{
-    background-image: linear-gradient(hsl(52, 100%, 83%),hsl(52, 100%, 58%));
+    background-image: linear-gradient(hsl(52, 100%, 83%, 0.85),hsl(52, 100%, 58%, 0.85)), url(./pics/Convertible/BMW\ 4.jpg);
+    background-size: cover;
 }
 
 .sedan-bg{
-    background-image: linear-gradient(hsl(211, 100%, 83%),hsl(211, 100%, 58%));
+    background-image: linear-gradient(hsl(211, 100%, 83%, 0.85),hsl(211, 100%, 58%, 0.85)), url(./pics/Sedan/Audi\ A4.jpg);
+    background-size: cover;
 }
 
 .suv-bg{
-    background-image: linear-gradient(hsl(18, 100%, 83%),hsl(18, 100%, 58%));
+    background-image: linear-gradient(hsl(18, 100%, 83%, 0.85),hsl(18, 100%, 58%, 0.85)), url(./pics/SUV/Chevrolet\ Blazer.jpg);
+    background-size: cover;
 }
 
 /* MENU FRAMES */
+
+/* ------------------------------- */
 
 #top{
     height: 100vh;
@@ -487,7 +611,6 @@ body{
     transition: 1s;
     display: none;
     animation: fadeIn 0.5s forwards;
-    
 }
 
 #mid{
@@ -512,7 +635,10 @@ body{
     box-shadow: inset hsl(0, 0%, 0%) 0px 0px 30px -10px;
     animation: fadeIn 0.5s forwards;
     display: none;
-    animation: frameFloatBelow 1.5s infinite;
+/*     animation: frameFloatBelow 1.5s infinite; */
+    background-image: linear-gradient(hsla(0, 0%, 100%, 0.956),hsla(0, 0%, 100%, 0.796)), url(./pics/Sports/supra.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @keyframes fadeIn{
@@ -553,29 +679,6 @@ body{
     }
 }
 
-/* CARS HOVER BACKGROUND */
-
-.carsbg {
-    background-image: linear-gradient(hsl(269, 100%, 83%, 0.8),hsl(269, 100%, 58%, 0.8)), url(./pics/Sports/corvette.jpg);
-    background-size: cover;
-    animation-name: animeCarsBg;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes animeCarsBg{
-    0%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(-20px)
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-
-
 
 
 
@@ -591,7 +694,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(hsl(269, 100%, 83%, 0.9),hsl(269, 100%, 58%, 0.9)), url(./pics/Sports/corvette.jpg) !important;
+    background-image: linear-gradient(hsla(0, 0%, 44%, 0.8),hsla(0, 0%, 0%, 0.8)), url(./pics/logo/footer.jpg);
     background-size: cover;
     
 }

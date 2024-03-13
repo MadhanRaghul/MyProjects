@@ -8,19 +8,26 @@ const sports = document.getElementById('sports')
 const container = document.getElementsByClassName('container')
 const carsbtn= document.getElementsByClassName('carsbtn')
 
+
 const top1 = document.getElementById('top')
 const mid1 = document.getElementById('mid')
 const below1 = document.getElementById('below')
 
-const corvetteBg = document.getElementById('corvette-bg')
 
-/*menu.addEventListener('mouseover', () => {
-  calc.style.transform = 'translateX(300px)'
+/* DROPDOWN */
+
+const navCartypes = document.getElementById('navCartypes')
+const cartypes = document.getElementById('cartypes')
+
+navCartypes.addEventListener('click', () => {
+    if (cartypes.style.display === 'flex') {
+        cartypes.style.display = 'none'
+    } 
+    else {
+        cartypes.style.display = 'flex'
+    }
 })
 
-manu.addEventListener('mouseout', () => {
-  calc.style.transform = 'translateX(0)'
-})*/
 
 /* MENU HOVER */
 
@@ -98,8 +105,3 @@ suv.addEventListener('mouseover', () => {
     top1.style.display = 'block'
 })
 
-
-
-corvetteBg.addEventListener('mouseover', () => {
-    document.getElementById('sporty').classList.add('carsbg')
-})

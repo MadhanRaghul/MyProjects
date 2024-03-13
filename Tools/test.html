@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Class to Parent Div</title>
+    <style>
+        .parent {
+            background-color: lightgray;
+            padding: 20px;
+            position: relative; /* Establish stacking context for child elements */
+        }
+        .child {
+            background-color: lightblue;
+            padding: 10px;
+            margin-top: 10px;
+            position: relative; /* Ensure children have their own stacking context */
+            z-index: 1; /* Ensure children are above parent during animation */
+        }
+        .highlight {
+            opacity: 1;
+            transition: opacity 0.5s ease; /* Add transition to the opacity change */
+        }
+        .highlight-animation {
+            animation: fadeIn 0.5s forwards; /* Use keyframe animation for opacity */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="parent" id="parentDiv">
+    <div class="child">Child 1</div>
+    <div class="child">Child 2</div>
+    <div class="child">Child 3</div>
+</div>
+
+<button onclick="highlightParent()">Highlight Parent</button>
+
+<script>
+    function highlightParent() {
+        var parentDiv = document.getElementById('parentDiv');
+        parentDiv.classList.add('highlight-animation');
+        setTimeout(function() {
+            parentDiv.classList.remove('highlight-animation');
+        }, 500); // Remove animation class after animation duration
+    }
+</script>
+
+</body>
+</html>
