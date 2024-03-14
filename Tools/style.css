@@ -634,7 +634,7 @@ body{
     box-shadow: inset hsl(0, 0%, 0%) 0px 0px 30px -10px;
     animation: fadeIn 1s forwards;
     display: none;
-    background-image: linear-gradient(hsla(0, 0%, 100%, 0.956),hsla(0, 0%, 100%, 0.796)), url(./pics/Sports/supra.jpg);
+    background-image: linear-gradient(hsla(0, 0%, 100%, 0.956),hsla(0, 0%, 100%, 0.796));
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -679,12 +679,6 @@ body{
 }
 
 
-
-
-
-
-
-
 /* FOOTER */
 
 .footer{
@@ -715,6 +709,26 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     animation: loadBg 4s forwards;
+}
+
+.tp-muscle{
+    background-image: linear-gradient(hsl(321, 100%, 83%, 0.85),hsl(321, 100%, 58%, 0.85)), url(./pics/Muscle/Thunder\ bird.jpg) !important;
+}
+
+.tp-electric{
+    background-image: linear-gradient(hsl(161, 100%, 83%, 0.85),hsl(161, 100%, 58%, 0.85)), url(./pics/Electric/Tesla\ Model\ S.jpg);
+}
+
+.tp-convertible{
+    background-image: linear-gradient(hsl(52, 100%, 83%, 0.85),hsl(52, 100%, 58%, 0.85)), url(./pics/Convertible/BMW\ 4.jpg);
+}
+
+.tp-sedan{
+    background-image: linear-gradient(hsl(211, 100%, 83%, 0.85),hsl(211, 100%, 58%, 0.85)), url(./pics/Sedan/Audi\ A4.jpg);
+}
+
+.tp-suv{
+    background-image: linear-gradient(hsl(18, 100%, 83%, 0.85),hsl(18, 100%, 58%, 0.85)), url(./pics/SUV/Chevrolet\ Blazer.jpg);
 }
 
 @keyframes loadBg{
@@ -798,6 +812,7 @@ body{
     background-color: rgb(238, 238, 238);
     height: 80px;
     width: 250px;
+    border-radius: 5px;
 }
 
 hr{
@@ -807,7 +822,6 @@ hr{
 /* SHOWCASE */
 
 .showcase{
-    border: 2px solid black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.2em;
     display: flex;
@@ -823,7 +837,6 @@ hr{
 }
 
 .showcar{
-    border: 1px solid gray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -831,8 +844,33 @@ hr{
     padding-top: 80px;
 }
 
-.key{
+.showimg img{
+    border-radius: 20px 20px 0px 20px;
+}
+
+.key1, .key2,.key3, .key4,.key5, .key6{
     font-weight: bold;
+    padding-right: 10px;
+}
+
+.key5{
+    padding-right: 86px;
+}
+
+.key4{
+    padding-right: 67px;
+}
+
+.key3{
+    padding-right: 85px;
+}
+
+.key2{
+    padding-right: 73px;
+}
+
+.key1{
+    padding-right: 73px;
 }
 
 .showimg{
