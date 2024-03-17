@@ -33,26 +33,32 @@ navCartypes.addEventListener('click', () => {
 
 cars.addEventListener('mouseover', () => {
     conver.classList.add('animateconver')
+    conver.style.display = 'block'
 } )
 
 cars.addEventListener('mouseover', () => {
     suv.classList.add('animatesuv')
+    suv.style.display = 'block'
 } )
 
 cars.addEventListener('mouseover', () => {
     electric.classList.add('animateelectric')
+    electric.style.display = 'block'
 } )
 
 cars.addEventListener('mouseover', () => {
     sedan.classList.add('animatesedan')
+    sedan.style.display = 'block'
 } )
 
 cars.addEventListener('mouseover', () => {
     sports.classList.add('animatesports')
+    sports.style.display = 'block'
 } )
 
 cars.addEventListener('mouseover', () => {
     muscle.classList.add('animatemuscle')
+    muscle.style.display = 'block'
 } )
 
 /* CURVY FRAMES */
@@ -105,3 +111,8 @@ suv.addEventListener('mouseover', () => {
     top1.style.display = 'block'
 })
 
+/* const test = document.getElementById('corvette')
+
+function testy(){
+    test.classList.toggle('card-image-zoom')
+} */
