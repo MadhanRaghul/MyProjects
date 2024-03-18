@@ -111,8 +111,4 @@ suv.addEventListener('mouseover', () => {
     top1.style.display = 'block'
 })
 
-/* const test = document.getElementById('corvette')
 
-function testy(){
-    test.classList.toggle('card-image-zoom')
-} */

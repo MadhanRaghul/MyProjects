@@ -524,26 +524,6 @@ body{
     border-radius: 10px;
 }
 
-/* ----------Under Testing---------- */
-
-/* .card-image-zoom{
-    transition: 0.5s;
-    z-index: 5;
-    animation: animeImgZoom 0.5s forwards;
-    text-emphasis: none;
-}
-
-@keyframes animeImgZoom{
-    from{
-        scale: 1;
-    }
-    to{
-        scale: 2;
-        position: absolute;
-        justify-content: center;
-    }
-} */
-
 .cars-card p{
     z-index: 1;
     margin-top: -25px;
@@ -719,9 +699,25 @@ body{
     
 }
 
+/* ON SCROLL ANIMATIONS */
 
+.cars-card{
+    animation: scrollHomeImg linear;
+    animation-timeline: view(550px 0px);
+}
 
-/* ------------------------- SPORTS PAGE ---------------------------- */
+@keyframes scrollHomeImg{
+    from{
+        scale: 0.9;
+        opacity: 0;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+/* ------------------------- ABOUT CARS PAGES ---------------------------- */
 
 /* TITLE PAGE */
 
@@ -902,8 +898,36 @@ hr{
 
 .showimg{
     width: 50%;
+    animation: scrollMoreImg linear;
+    animation-timeline: view(550px 0px);
 }
 
 .showdetails{
     width: 50%;
+    animation: scrollMoreDetails linear;
+    animation-timeline: view(550px 0px);
+}
+
+/* ON SCROLL ANIMATIONS */
+
+@keyframes scrollMoreImg{
+    from{
+        opacity: 0;
+        transform: translateX(-5%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scrollMoreDetails{
+    from{
+        opacity: 0;
+        transform: translateX(5%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
