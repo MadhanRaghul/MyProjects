@@ -112,3 +112,33 @@ suv.addEventListener('mouseover', () => {
 })
 
 
+// Function to add class on scroll
+function navBlur() {
+    var navbar = document.querySelector('.navbar')
+    
+    if (!navbar) return;
+    var scrollTop = window.scrollY;
+
+    if (scrollTop > 600) {
+      navbar.classList.add('nav-blur')
+    } else {
+      navbar.classList.remove('nav-blur')
+    }
+  }
+window.addEventListener('scroll', navBlur)
+  
+/* 
+function specsPop() {
+    var specs = document.querySelector('.specs')
+    
+    if (!specs) return;
+    var scrollTop = window.scrollY;
+
+    if (scrollTop > 600) {
+      specs.classList.add('nav-blur')
+    } else {
+      specs.classList.remove('nav-blur')
+    }
+  }
+window.addEventListener('scroll', specsPop) */
+  

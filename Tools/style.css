@@ -717,6 +717,11 @@ body{
     }
 }
 
+.nav-blur{
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+}
+
 /* ------------------------- ABOUT CARS PAGES ---------------------------- */
 
 /* TITLE PAGE */
@@ -931,3 +936,23 @@ hr{
         transform: translateX(0);
     }
 }
+
+
+.specs-pop{
+    animation: scrollMoreSpecs 1.5 forwards;
+}
+
+@keyframes scrollMoreSpecs{
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(-150%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
