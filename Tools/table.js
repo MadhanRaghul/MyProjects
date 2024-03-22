@@ -933,7 +933,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           "Rank": 1,
           "Brand": "Ford",
-          "Truck Name": "F-150",
+          "Car Name": "F-150",
           "Country": "United States",
           "Year": 2023,
           "Top Speed (mph)": 120,
@@ -943,7 +943,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           "Rank": 2,
           "Brand": "Chevrolet",
-          "Truck Name": "Silverado 1500",
+          "Car Name": "Silverado 1500",
           "Country": "United States",
           "Year": 2023,
           "Top Speed (mph)": 140,
@@ -953,7 +953,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           "Rank": 3,
           "Brand": "Ram",
-          "Truck Name": "1500",
+          "Car Name": "1500",
           "Country": "United States",
           "Year": 2023,
           "Top Speed (mph)": 120,
@@ -963,7 +963,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           "Rank": 4,
           "Brand": "Toyota",
-          "Truck Name": "Tacoma",
+          "Car Name": "Tacoma",
           "Country": "Japan",
           "Year": 2023,
           "Top Speed (mph)": 115,
@@ -973,7 +973,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           "Rank": 5,
           "Brand": "GMC",
-          "Truck Name": "Sierra 1500",
+          "Car Name": "Sierra 1500",
           "Country": "United States",
           "Year": 2023,
           "Top Speed (mph)": 140,
