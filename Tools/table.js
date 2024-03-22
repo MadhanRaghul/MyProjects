@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
       ]
 
     function generateTableRows(data) {
-        let rows = '';
+        let rows = ''
 
         data.forEach(function(item) {
             rows += `
@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <td>${item["Horsepower (hp)"]}</td>
                     <td>${item["0-60 mph (seconds)"]}</td>
                 </tr>
-            `;
-        });
+            `
+        })
 
         return rows;
     }
