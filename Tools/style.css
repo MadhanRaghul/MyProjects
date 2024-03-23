@@ -130,7 +130,7 @@ body{
 #cartypes{
     display: none;
     position: fixed;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.537);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -155,10 +155,6 @@ body{
 
 #cartypes a:hover{
     color: grey;
-}
-
-#arrow{
-    transform: rotate(-45deg);
 }
 
 @keyframes animeDropdown{
@@ -1014,15 +1010,31 @@ hr{
 
 /* --------------- TOP FIVE TABLE -------------- */
 
-.table-container{
-    padding-top: 50px;
+.table-bg {
     height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    background-image: url(./pics/logo/blur-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    position: relative;
+    z-index: 1;
+}
+
+.table-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10%;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2; 
     flex-direction: column;
 }
+
 
 th, td{
     padding: 20px 20px 10px 10px;
@@ -1030,12 +1042,12 @@ th, td{
 }
 
 th{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.635);
     color: white;
 }
 
 td{
-    background-color: rgb(239, 239, 239);
+    background-color: rgba(239, 239, 239, 0.623);
     animation: loadTable 1s forwards;
 }
 
@@ -1055,13 +1067,13 @@ td{
     cursor: pointer;
     border-radius: 5px;
     margin: 5px;
-    background-color: rgb(239, 239, 239);
+    background-color: rgba(239, 239, 239, 0.6);
     transition: all 0.3s;
 }
 
 .table-btns button:hover{
     scale: 1.1;
-    background-color: rgb(214, 214, 214);
+    background-color: rgba(214, 214, 214, 0.6);
 }
 
 .table-btns button:active{
