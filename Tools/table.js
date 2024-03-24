@@ -987,3 +987,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+
+const navCartypes = document.getElementById('navCartypes')
+const cartypes = document.getElementById('cartypes')
+
+navCartypes.addEventListener('click', () => {
+    if (cartypes.style.display === 'flex') {
+        cartypes.style.display = 'none'
+    } 
+    else {
+        cartypes.style.display = 'flex'
+    }
+})

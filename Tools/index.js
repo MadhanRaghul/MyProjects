@@ -127,18 +127,3 @@ function navBlur() {
   }
 window.addEventListener('scroll', navBlur)
   
-/* 
-function specsPop() {
-    var specs = document.querySelector('.specs')
-    
-    if (!specs) return;
-    var scrollTop = window.scrollY;
-
-    if (scrollTop > 600) {
-      specs.classList.add('nav-blur')
-    } else {
-      specs.classList.remove('nav-blur')
-    }
-  }
-window.addEventListener('scroll', specsPop) */
-  
