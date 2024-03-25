@@ -1211,11 +1211,12 @@ tr{
 
     .logo{
         padding-left: 0;
-        padding-top: 5%;
+        padding-top: 15%;
+        height: 7vh;
     }
 
     .logo img{
-        height: 20px;
+        height: 15px;
     }
 
     .contents{
@@ -1225,7 +1226,7 @@ tr{
 
     .contents li{
         padding-left: 0;
-        
+        height: 6vh;
     }
 
     /* CAR TYPES */
@@ -1238,11 +1239,10 @@ tr{
     /* CONTAINER */
 
     .container{
-        scale: .45;
-        height: 30vh;
+        scale: .5;
+        height: 100vh;
         width: 100vw;
         overflow: visible;
-        padding-top: 30vh;
     }
 
     /* MENU BUTTONS */
@@ -1250,8 +1250,8 @@ tr{
     /* ABOUT CARS */
 
     .about-cars{
-        height: 50vh;
-        width: 100vw;
+        height: 27vh;
+        width: auto;
         font-size: .5em;
         padding-left: 2%;
         padding-right: 2%;
@@ -1277,6 +1277,7 @@ tr{
 
     .cars-card{
         padding-bottom: 3vh;
+        animation-timeline: view(90vh 0px);
     }
 
     .cars-card img{
@@ -1312,12 +1313,13 @@ tr{
     /* TOP FIVE TABLE */
 
     .table-bg{
-        display: none;
+        background-image: url(./pics/logo/topfivemq.jpg)
     }
 
     .table{
-        scale: .5;
+        scale: .6;
         height: 50vh;
+        padding-top: 10%;
     }
 
     th{
@@ -1339,10 +1341,103 @@ tr{
 
     /* ABOUT CARS PAGES */
 
+    .title-page{
+        padding-top: 20vh;
+        height: 80vh;
+    }
 
+    .title-page h1{
+        font-size: 2.8rem;
+        animation: loadTitleMQ 4s forwards;
+    }
 
+    .title-page p{
+        padding-left: 2%;
+        padding-right: 2%;
+        font-size: 1rem;
+    }
 
+    @keyframes loadTitleMQ{
+        0%{
+            transform: translateY(200%);
+            opacity: 0;
+        }
+        10%{
+            transform: translateY(-10%);
+            opacity: 0.7;
+        }
+        40%{
+            transform: translateY(50%);
+            opacity: 1;
+        }
+        70%{
+            transform: translateY(50%);
+            opacity: 1;
+            scale: 1;
+        }
+        100%{
+            transform: translateY(-70%);
+            scale: 0.8;
+        }
+    }
 
+    /* SPECIFICATIONS */
+
+    .specifications{
+        height: 40vh;
+        justify-content: center;
+        margin: 0;
+        align-content: center;
+    }
+
+    .specs{
+        height: 50px;
+        width: 125px;
+        font-size: .5em;
+        padding: 7px;
+    }
+
+    /* SHOWCASE */
+
+    .showcase{
+        height: auto;
+        width: auto;
+    }
+
+    .showdesc{
+        width: 95%;
+        line-height: normal;
+        word-wrap: break-word;
+        text-align: justify;
+    }
+
+    .showcar{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .showimg{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .showimg img{
+        height: 220px;
+        padding-left: 2%;
+        padding-right: 2%;
+        width: auto;
+    }
+
+    .key1, .key2,.key3, .key4,.key5, .key6{
+        font-weight: bold;
+        padding-right: 0;
+    }
+
+    .showdetails{
+        width: 90%;
+        animation: none;
+    }
 
 
 
