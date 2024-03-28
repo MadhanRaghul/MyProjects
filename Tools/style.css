@@ -1194,6 +1194,7 @@ tr{
 
     html{
         scroll-snap-type: none;
+        scroll-behavior: smooth;
     }
 
     .section{
